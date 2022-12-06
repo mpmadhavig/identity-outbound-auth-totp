@@ -535,6 +535,17 @@ public class TOTPAuthenticator extends AbstractApplicationAuthenticator
      * @return true, if retry authentication is enabled
      */
     @Override
+    protected boolean retryAuthenticationEnabled(AuthenticationContext context) {
+
+        return retryAuthenticationEnabled();
+    }
+
+    /**
+     * Check whether status of retrying authentication.
+     *
+     * @return true, if retry authentication is enabled
+     */
+    @Override
     protected boolean retryAuthenticationEnabled() {
 
         return true;
